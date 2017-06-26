@@ -15,10 +15,6 @@
             display: flex;
         }
 
-        .custom-file-control::before {
-            content: "Choose file";
-        }
-
         .container {
             margin: 0 auto;
         }
@@ -35,6 +31,12 @@
         .card {
             margin: 5px auto 5px auto;
         }
+        
+        #memeFrame {
+            width: 98%;
+            max-width: 500px;
+        }
+
     </style>
 </head>
 
@@ -42,7 +44,7 @@
     <div class="container">
         <div class="card text-center">
             <div class="canvas">
-                <canvas width="500" height="500" class="rounded"></canvas>
+                <canvas id="memeFrame" width="500" height="500" class="rounded"></canvas>
             </div>
             <div class="card-block">
                 <h4 class="card-title">Meme Generator</h4>
