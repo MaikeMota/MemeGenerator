@@ -3,59 +3,68 @@
 <html lang="en">
 
 <head>
-    <title>MemeGenerator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/index.css">
+  <title>MemeGenerator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="card text-center">
-            <div class="canvas">
-                <canvas id="memeFrame" width="500" height="500" class="rounded"></canvas>
-            </div>
-            <div class="card-block">
-                <h4 class="card-title">Meme Generator</h4>
-                <div>
-                    <form>
-                        <div class="form-group row">
-                            <label class="custom-file">
-                            <input type="file" id="file" class="custom-file-input">
-                            <span class="custom-file-control form-control-file"></span>
-                        </label>
-                        </div>
-                        <div class="form-group row">
-                            <label for="topLineText" class="col-2 col-form-label">Top Line:</label>
-                            <div class="col-10">
-                                <input type="text" id="topLineText" class="form-control mx-sm-3">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="bottomLineText" class="col-2 col-form-label">Bottom Line:</label>
-                            <div class="col-10">
-                                <input type="text" id="bottomLineText" class="form-control mx-sm-3">
-                            </div>
-                        </div>
-                        <button id="saveBtn" type="button" class="btn btn-primary">Save Your Meme</button>
-                        <button id="clearBtn" type="button" class="btn btn-danger">Clear Your Meme</button>
-                    </form>
-                </div>
-            </div>
+  <div class="w3-twothird">
+    <div class="w3-container">
+      <div class="card text-center">
+        <div class="canvas">
+          <canvas id="memeFrame" width="500" height="500" class="rounded"></canvas>
         </div>
+        <div class="card-block">
+          <h4 class="card-title">Meme Generator</h4>
+
+        </div>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-    <script src="assets/js/Meme.js"></script>
-    <script src="assets/js/MemeGenerator.js"></script>
-    <script src="assets/js/index.js"></script>
+  </div>
+  <div class="w3-third">
+    <div class="w3-container">
+      <div class="w3-cell w3-cell-middle">
+        <form>
+          <div class="form-group row">
+            <label class="custom-file">
+              <input type="file" id="file" class="custom-file-input" tabindex="1">
+              <span class="custom-file-control form-control-file"></span>
+          </label>
+          </div>
+          <div class="form-group row">
+            <label for="topLineText" class="col-2 col-form-label">Top Line:</label>
+            <div class="col-10">
+              <input type="text" id="topLineText" class="form-control mx-sm-3" tabindex="2">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="bottomLineText" class="col-2 col-form-label">Bottom Line:</label>
+            <div class="col-10">
+              <input type="text" id="bottomLineText" class="form-control mx-sm-3" tabindex="3">
+            </div>
+          </div>
+          <button id="saveBtn" type="button" class="w3-circle w3-green" tabindex="4"><i class="fa fa-save"></i></button>
+          <button id="clearBtn" type="button" class="btn btn-danger" tabindex="5">Clear Your Meme</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="w3-container w3-teal">
+    <h5>Footer</h5>
+    <p>Footer information goes here</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="assets/js/Meme.js"></script>
+  <script src="assets/js/MemeGenerator.js"></script>
+  <script src="assets/js/index.js"></script>
 
 
 </body>

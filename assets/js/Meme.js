@@ -1,6 +1,8 @@
+'use strict'
+
 class Meme {
 
-    constructor(image, topLineText, bottomLine) {
+    constructor(image, topLineText, bottomLineText) {
         this.id = new Date().getTime();
         this.image = image;
         this.topLineText = topLineText;
