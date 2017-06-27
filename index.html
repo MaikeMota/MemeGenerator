@@ -14,50 +14,55 @@
 </head>
 
 <body>
-  <div class="w3-twothird">
-    <div class="w3-container">
-      <div class="card text-center">
-        <div class="canvas">
-          <canvas id="memeFrame" width="500" height="500" class="rounded"></canvas>
-        </div>
-        <div class="card-block">
-          <h4 class="card-title">Meme Generator</h4>
+  <div class="w3-container">
+    <div class="w3-twothird">
+      <div class="w3-container">
+        <div class="card text-center">
+          <div class="canvas">
+            <canvas id="memeFrame" width="500" height="500" class="rounded"></canvas>
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">Meme Generator</h4>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w3-third">
-    <div class="w3-container">
-      <div class="w3-cell w3-cell-middle">
-        <form>
-          <div class="form-group row">
-            <label class="custom-file">
-              <input type="file" id="file" class="custom-file-input" tabindex="1">
-              <span class="custom-file-control form-control-file"></span>
-          </label>
-          </div>
-          <div class="form-group row">
-            <label for="topLineText" class="col-2 col-form-label">Top Line:</label>
-            <div class="col-10">
-              <input type="text" id="topLineText" class="form-control mx-sm-3" tabindex="2">
+    <div class="w3-third">
+      <div class="w3-container">
+        <div class="w3-cell w3-cell-middle">
+          <form>
+            <div class="form-group row">
+              <label class="custom-file">
+                <input type="file" id="file" class="custom-file-input" tabindex="1">
+                <span class="custom-file-control form-control-file"></span>
+            </label>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="bottomLineText" class="col-2 col-form-label">Bottom Line:</label>
-            <div class="col-10">
-              <input type="text" id="bottomLineText" class="form-control mx-sm-3" tabindex="3">
+            <div class="form-group row">
+              <label for="topLineText" class="col-2 col-form-label">Top Line:</label>
+              <div class="col-10">
+                <input type="text" id="topLineText" class="form-control mx-sm-3" tabindex="2">
+              </div>
             </div>
-          </div>
-          <button id="saveBtn" type="button" class="w3-circle w3-green" tabindex="4"><i class="fa fa-save"></i></button>
-          <button id="clearBtn" type="button" class="btn btn-danger" tabindex="5">Clear Your Meme</button>
-        </form>
+            <div class="form-group row">
+              <label for="bottomLineText" class="col-2 col-form-label">Bottom Line:</label>
+              <div class="col-10">
+                <input type="text" id="bottomLineText" class="form-control mx-sm-3" tabindex="3">
+              </div>
+            </div>
+            <button id="saveBtn" type="button" class="w3-circle w3-green" tabindex="4"><i class="fa fa-save"></i></button>
+            <button id="clearBtn" type="button" class="btn btn-danger" tabindex="5">Clear Your Meme</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
   <footer class="w3-container w3-teal">
-    <h5>Footer</h5>
-    <p>Footer information goes here</p>
+
+    <div class="w3-cell w3-cell-middle">
+      <h5>MemeGenerator</h5>
+      <p>See my GitHub</p>
+    </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
