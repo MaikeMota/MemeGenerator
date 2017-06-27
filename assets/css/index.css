@@ -1,0 +1,29 @@
+.container {
+    margin: 0 auto;
+}
+
+.custom-file {
+    width: 100%;
+}
+
+.canvas {
+    margin: 5px auto 0 auto;
+    width: 100%;
+}
+
+.card {
+    margin: 5px auto 5px auto;
+}
+
+.custom-file-control.selected:lang(en)::after {
+    content:'';
+}
+
+#memeFrame {
+    width: 98%;
+    max-width: 500px;
+}
+
+#image-container {
+    display: flex;
+}
