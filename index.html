@@ -10,33 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <style>
-        #image-container {
-            display: flex;
-        }
-
-        .container {
-            margin: 0 auto;
-        }
-
-        .custom-file {
-            width: 100%;
-        }
-
-        .canvas {
-            margin: 5px auto 0 auto;
-            width: 100%;
-        }
-
-        .card {
-            margin: 5px auto 5px auto;
-        }
-
-        #memeFrame {
-            width: 98%;
-            max-width: 500px;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 
 <body>
@@ -68,6 +42,7 @@
                             </div>
                         </div>
                         <button id="saveBtn" type="button" class="btn btn-primary">Save Your Meme</button>
+                        <button id="clearBtn" type="button" class="btn btn-danger">Clear Your Meme</button>
                     </form>
                 </div>
             </div>
@@ -79,91 +54,9 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
-    <script>
-        jQuery('.custom-file-input').on('change', function () {
-            var fileName = $(this).val();
-        })
-        // Get Canvas2DContext
-        var canvas = document.querySelector('canvas');
-        var ctx = canvas.getContext("2d");
-        function textChangeListener(evt) {
-            var id = evt.target.id;
-            var text = evt.target.value;
-
-            if (id == "topLineText") {
-                window.topLineText = text;
-            } else {
-                window.bottomLineText = text;
-            }
-
-            redrawMeme(window.imageSrc, window.topLineText, window.bottomLineText);
-        }
-
-        function redrawMeme(image, topLine, bottomLine) {
-            ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
-            if (topLine)
-                drawText(topLine, canvas.width / 2, 50)
-
-            if (bottomLine)
-                drawText(bottomLine, canvas.width / 2, canvas.width - 10)
-
-        }
-
-        function drawText(text, x, y) {
-            ctx.font = '36pt Impact';
-            ctx.textAlign = 'center';
-
-            ctx.fillStyle = 'white';
-            ctx.fillText(text, x, y);
-
-            ctx.strokeStyle = 'black';
-            ctx.lineWidth = 3;
-            ctx.strokeText(text, x, y);
-        }
-
-        function saveFile() {
-            if (window.navigator && window.navigator.msSaveOrOpenBlob) { // for EDGE and IE
-                window.navigator.msSaveOrOpenBlob(document.querySelector('canvas').msToBlob());
-            } else {
-                window.open(document.querySelector('canvas').toDataURL());
-            }
-        }
-
-        function handleFileSelect(evt) {
-            var canvasWidth = 500;
-            var canvasHeight = 500;
-            var file = evt.target.files[0];
-
-            var reader = new FileReader();
-            reader.onload = function (fileObject) {
-                var data = fileObject.target.result;
-
-                // Create an image object
-                var image = new Image();
-                image.onload = function () {
-                    window.imageSrc = this;
-                    redrawMeme(window.imageSrc, null, null);
-                }
-
-                // Set image data to background image.
-                image.src = data;
-            };
-            reader.readAsDataURL(file)
-        }
-
-        window.topLineText = "";
-        window.bottomLineText = "";
-        var input1 = document.getElementById('topLineText');
-        var input2 = document.getElementById('bottomLineText');
-        input1.oninput = textChangeListener;
-        input2.oninput = textChangeListener;
-        $('.custom-file-input').on('change', function () {
-            var fileName = $(this).val().substring($(this).val().lastIndexOf('\\') + 1, $(this).val().length);
-            $(this).next('.form-control-file').addClass("selected").html(fileName);
-        })
-        document.getElementById('file').addEventListener('change', handleFileSelect, false);
-        document.querySelector('button').addEventListener('click', saveFile, false);
-    </script>
+    <script src="/assets/js/Meme.js"></script>
+    <script src="/assets/js/MemeGenerator.js"></script>
+    <script src="/assets/js/index.js"></script>
 
 
 </body>
