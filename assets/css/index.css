@@ -1,7 +1,3 @@
-.container {
-    margin: 0 auto;
-}
-
 .custom-file {
     width: 100%;
 }
@@ -26,4 +22,13 @@
 
 #image-container {
     display: flex;
+}
+
+/*
+==================================================
+            Custom CSS
+==================================================
+*/
+footer {
+    margin-top: 1.3em;
 }
